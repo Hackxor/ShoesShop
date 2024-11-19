@@ -1,0 +1,8 @@
+{
+    "name": "root/archivo_pal_linux",
+    "type": "project",
+    "require": {
+        "google/apiclient": "^2.18",
+        "facebook/graph-sdk": "^4.0"
+    }
+}

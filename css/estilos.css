@@ -1,0 +1,958 @@
+/* importacion tipo de letra */
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+      margin:0;
+      box-sizing:border-box;
+      padding:0;
+      font-family: 'Prompt', sans-serif;
+
+}
+
+iframe{
+      margin:0;
+}
+
+#iframeHeader{
+      background:#fff;
+      will-change: transform, position;
+       z-index:99999;
+ transition:400ms ease-in;
+}
+
+#header, #header #navegacion, #header #navegacion #barraprincipal{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap:5px;
+}
+#header #navegacion #barraprincipal{
+       flex-direction: row;
+       gap:10px;
+       padding: 15px;
+       justify-content: space-between;
+       
+}
+
+#header #navegacion #barraprincipal .distribuye{
+      width: 33%;
+      padding-left: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      gap:7px;
+      
+}
+
+
+#header #navegacion #barraprincipal .distribuye #ver_carrito{
+      cursor:pointer;
+      transition:130ms ease;
+}
+
+
+#header #navegacion #barraprincipal .distribuye #ver_carrito:active{
+  transform: scale(1.2);
+  opacity: 0.3;
+
+}
+
+#header #navegacion #opciones{
+      width: 100%;
+} 
+
+#header #navegacion #opciones .lista_ops{
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      gap:10px;
+      padding: 10px;
+      flex-direction: row;
+      list-style: none;
+}
+
+#header #navegacion #opciones .lista_ops a{
+   text-decoration: none;
+   color:#000;
+   font-size: 12px;
+   transition: 230ms ease-in-out;
+}
+
+#header #navegacion #opciones .lista_ops a:hover{
+       transform: scale(1.1);
+       opacity: 0.8;
+}
+
+#header #navegacion #promos{
+      width: 100%;
+      background: #000;
+}
+
+/* fin estilos del header */
+
+#main{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap:12px;
+}
+
+#paginaLogin{
+
+  background:url("../video/Tenis.gif");
+  background-repeat:none;
+  object-fit:cover;
+
+
+}
+
+#paginaLogin img{
+      position: absolute;
+      z-index: 999;
+      top: 20px;
+}
+
+/* estilos formulario login */
+.login{
+      width: 30%;
+      transition: 300ms ease-in;
+      margin-top: 130px;
+      background:#fff;
+      position: absolute;
+      right: 35%;
+      top: 0%;
+      z-index: 99;
+      display: flex;
+      justify-content: center;
+      align-items: space-around;
+      flex-direction: column;
+      gap:20px;
+      border: 1px solid grey;
+      padding: 15px;
+      border-radius: 5px ;
+}
+
+.login .caja{
+      width: 100%;
+      display: flex;
+      position: relative;
+      justify-content: center;
+      align-items:space-between;
+      flex-direction: column-reverse;
+      gap:19px;
+}
+
+
+
+.login .caja label{
+      position: absolute;
+      top: 10px;
+      left: 4px;
+      font-size: 14px;
+      opacity: 0.4;
+      transition: 200ms ease-out;
+}
+
+.login .caja input:focus ~ label,
+.login .caja input:valid ~ label{
+ top: -17px;
+ left: 0px;
+ transform: scale(0.8);
+ color: rgb(10, 82, 236);
+
+}
+
+.login .caja input{
+  outline: none;
+  border: none;
+  width: 100%;
+  background: rgb(248, 248, 248);
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.login .caja input[type="text"]:focus,.login .caja input[type="password"]:focus,.login .caja input[type="mail"]:focus{
+border:2px solid rgb(10, 82, 236);
+}
+
+.login input[type="submit"]{
+  width: 100%;
+  background: #000;
+  cursor: pointer;
+  border-radius: 8px;
+  color:#fff;
+  padding: 5px;
+}
+
+.login a{
+      text-decoration: none;
+      color:#000;
+      font-size: 10px;
+}
+
+
+.login .facebook{
+      border-color: blue;
+}
+
+
+.login .iniciar_con{
+      width: 100%;
+      padding: 5px;
+      text-align: center;
+      border: 1px solid grey;
+      border-radius: 5px;
+}
+
+
+
+.login_iniciar .google,.login_iniciar .facebook{
+      transition: 0.3s ease;
+      position:relative;
+}
+
+.login_iniciar .google::before ,.login_iniciar .facebook::before{
+      position: absolute;
+      content: '';
+      height: 0;
+      width: 0;
+      top: 0;
+      left: 0;
+      background: linear-gradient(135deg, #fff 30%, #fff 50%, rgb(28, 150, 4) 50%, rgb(20, 149, 209) 50%);
+      border-radius: 0 0 0.5em 0;
+      box-shadow: 0.2em 0.2em 0.2em rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+    }
+
+    .login_iniciar .google:hover,.login_iniciar .facebook:hover{
+      border-radius:35px 0px 0px 0px;
+    }
+
+    .login_iniciar .google:hover::before ,.login_iniciar .facebook:hover::before{
+      width: 1.6em;
+      height: 1.6em;
+    }
+
+
+
+.login #face{
+ font-weight: 800;
+ font-size: 25px;
+ color:blue;
+}
+
+
+
+
+.login a{
+      font-size: 16px;
+}
+.login  #estilar_como_google{
+    font-weight: 500;
+    font-size: 25px;
+    background: conic-gradient(
+      from 38deg,
+      #4285F4 0deg 90deg,
+      #34A853 90deg 200deg,
+      #FBBC05 180deg 260deg,
+      #EA4335 270deg 360deg
+  );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    
+}
+
+
+.login_registrar{
+      opacity: 0;
+      background:#fff;
+      transition: 300ms ease-in;
+      position: absolute;
+      right: 0;
+      z-index: -2;
+}
+
+
+#footer{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap:10px;
+      padding: 5px;
+}
+
+#footer .datos_redes_subscripcion{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      gap:10px;
+      padding: 10px;
+}
+#footer .datos_redes_subscripcion .articulo{
+      width: 33%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 8px;
+}
+
+#footer .datos_redes_subscripcion .articulo ul{
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      flex-direction: column;
+      gap: 16px;
+}
+#footer .datos_redes_subscripcion .articulo ul a{
+      text-decoration: none;
+      color:#000;
+      font-size: 10px;
+
+}
+
+#footer .datos_redes_subscripcion .articulo ul a li{
+  list-style: none;
+  
+}
+
+#footer .derechos_reservados{
+      width: 100%;
+      display: flex;
+      font-size: 8px;
+      justify-content: start;
+      align-items: start;
+      flex-direction: column;
+      gap:2px;
+}
+#footer .derechos_reservados span{
+      margin-left: 100px;
+
+}
+
+#footer .articulo .mas_info .envia_correo {
+      width: 100%;
+}
+#footer .articulo .mas_info .envia_correo .enviar_correo_btn {
+      width: 100%;
+      display: flex;
+      padding: 4px;
+      border-bottom: 0.3px  solid black;
+      justify-content: center;
+      align-items: center;
+}
+#footer .articulo .mas_info .envia_correo .enviar_correo_btn input{
+      border: none;
+      outline: none;
+      font-size: 13px;
+      
+
+}
+
+#footer .articulo .mas_info .envia_correo .enviar_correo_btn input::placeholder{
+      color: rgb(150, 149, 149);
+      font-size: 10px;
+
+}
+
+#footer .articulo .mas_info .envia_correo .enviar_correo_btn i{
+transition: 100ms ease-in-out;
+}
+
+#footer .articulo .mas_info .envia_correo .enviar_correo_btn i:active{
+opacity: 0.4;
+transform: scale(1.3);
+
+}
+
+#footer .articulo .mas_info .redes{
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      flex-direction: row; 
+}
+
+#footer .articulo .mas_info .redes a i{
+      display: flex;
+      padding: 8px;
+      justify-content: center;
+      align-items: center; 
+      transition: 240ms ease-in-out;
+      flex-direction: row; 
+      width: 30px;
+      height: 30px;
+}
+
+
+#footer .articulo .mas_info .redes a i:active, #footer .articulo .mas_info .redes a i:hover{ 
+   background: #000;
+   color: #fff;
+   border-radius: 50%;
+}
+
+/* fin del footer */
+
+/* MEDIA QUERYS */
+
+@media screen and (max-width: 768px) {
+
+      #login{
+
+            width: 98%;
+      }
+
+      #footer .datos_redes_subscripcion{
+            width: 100%;
+            flex-direction: column;
+            gap:12px;
+      }
+
+      #footer .datos_redes_subscripcion .articulo{
+        width: 100%;
+        align-items: start;
+      }
+      #frFooter{
+            height: 665px;
+      }
+
+      #header #opciones{
+            display: none;
+      }
+      #header #barraprincipal{
+            justify-content: space-around;
+      }
+
+      #header #barraprincipal .busqueda{
+     
+      position: relative;
+      }
+
+      #header #barraprincipal .carrito-usuario{
+        position: relative;
+      }
+
+
+      #header #barraprincipal .busqueda i{
+            position: absolute;
+            left: 0;
+      }
+
+
+      
+}
+
+/* estilos pagina de filtros y busqueda */
+
+.contenedor-productos{
+      width:85%;
+      display:grid;
+      gap:10px;
+      transition:300ms ease-in-out;
+      grid-template-columns:repeat(4,1fr);
+      grid-template-rows:repeat(3,1fr);
+      padding:10px;
+
+}
+
+.contenedor-productos article{
+      width:95%;
+      height:auto;
+      border:1px solid grey;
+      border-radius:12px;
+     
+}
+
+.contenedor-productos article .datos-tenis{
+      width:100%;
+      display:flex;
+      padding:18px;
+      gap:5px;
+      font-size:12px;
+      justify-content:center;
+      align-items:start;
+      flex-direction:column;    
+}
+
+.contenedor-productos article .datos-tenis #agregar_carrito, #body_busqueda #opciones-filtro button{
+      border:none;
+      outline:none;
+      border-radius:5px;
+      background:#000;
+      color:#fff;
+      padding:10px;
+      cursor:pointer;
+      transition:300ms ease-out;
+
+}
+
+.contenedor-productos article .datos-tenis #agregar_carrito:hover, #body_busqueda #opciones-filtro button:hover{
+   opacity:0.8;
+   background:rgb(238, 237, 237);
+   color:#000;
+
+}
+
+.contenedor-productos article img{
+      height:180px;
+      width:100%;
+      border-radius:12px 12px 0px 0px;
+      object-fit:cover;
+      transition:340ms ease-in-out;
+      cursor:pointer;
+}
+
+.contenedor-productos article img:hover{
+
+    filter:grayscale(80%);
+}
+
+
+#body_busqueda{
+      width:100%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      gap:20px;
+
+}
+
+#body_busqueda h4{
+      margin:20px;
+}
+
+#body_busqueda #opciones-filtro{
+      width:85%;
+      padding:10px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      gap:10px;
+}
+
+#body_busqueda #opciones-filtro #ordenamiento_distribucion{
+      width:85%;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      flex-direction:row;
+      gap:5px;
+}
+
+#body_busqueda #opciones-filtro #ordenamiento_distribucion #cantidad_de_cuadros{
+      display:flex;
+      justify-content:start;
+      align-items:center;
+      flex-direction:row;
+      gap:5px;
+}
+
+
+#ordenamiento_distribucion #ordenar_por {
+      padding:5px;
+      width:200px;
+      background:#fff;
+      border-color:grey;
+}
+
+/* parte mas */
+
+@keyframes scale-up{
+      to{scale: 1.5}
+}
+
+@keyframes fade-away{
+      to{opacity: 0}
+}
+.hero {
+      position: relative;
+      width: 100vw; /* Asegúrate de que cubra todo el ancho de la ventana */
+      height: 600px; /* Ajusta la altura según tus necesidades */
+      background-image: url('../img/fondo_korn.webp'); /* Cambia la ruta por la de tu imagen */
+      background-size: cover; /* Asegura que la imagen cubra todo el área */
+      background-position: center; 
+      display: flex; 
+      view-timeline: --scroll;
+      align-items: flex-end; 
+      animation:
+      scale-up both ease-in-out,
+      fade-away both linear;
+      animation-timeline: --scroll;
+      animation-range: 
+      exit 0% exit 100%,
+      exit 50% exit 90%;
+  }
+
+
+  .hero__content {
+      position: absolute;
+      bottom: 80px; /* Distancia desde el borde inferior */
+      left: 80px; /* Distancia desde el borde izquierdo */
+      color: white; /* Cambia el color del texto según tu diseño */
+  }
+
+  .hero__title {
+      font-size: 2rem; /* Ajusta el tamaño del texto según tus necesidades */
+      margin: 0; /* Elimina margen por defecto */
+  }
+
+  .hero__button {
+      display: inline-block;
+      margin-top: 10px; /* Espacio entre el título y el botón */
+      padding: 10px 20px; /* Espiacio interno del botón */
+      background-color: white; /* Color de fondo del botón */
+      color: black; /* Color del texto del botón */
+      text-decoration: none; /* Sin subrayado */
+      border-radius: 5px; /* Bordes redondeados */
+      transition: background-color 0.3s; /* Transición suave */
+  }
+
+  .hero__button:hover {
+      background-color: #e65c00; /* Color al pasar el mouse */
+  }
+
+    /* Container for the section */
+.container {
+
+max-width: 1200px;
+margin: -120px auto;
+padding: 20px;
+top:30px;
+margin-bottom: 30px;
+}
+
+/* Section title */
+.title {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 16px;
+}
+
+/* Scrollable container for the cards */
+.card-container {
+display: flex;
+overflow-x: auto;
+gap: 16px;
+padding-bottom: 8px;
+scrollbar-width: thin;
+scrollbar-color: #ccc transparent;
+}
+.card-container::-webkit-scrollbar {
+height: 8px;
+}
+.card-container::-webkit-scrollbar-thumb {
+background-color: #ccc;
+border-radius: 4px;
+}
+.card-container::-webkit-scrollbar-track {
+background: transparent;
+}
+
+/* Individual card styling */
+.card {
+min-width: 100px;
+max-width: 250px;
+background-color: #fff;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+overflow: hidden;
+flex-shrink: 0;
+}
+
+/* Card image styling */
+.card img {
+width: 100%;
+height: 160px;
+object-fit: cover;
+}
+
+/* Card content styling */
+.card-content {
+padding: 16px;
+}
+.card-title {
+font-size: 16px;
+font-weight: 500;
+margin-bottom: 8px;
+}
+.card-price {
+color: #777;
+font-size: 14px;
+}
+
+
+.container_tenis {
+text-align: center;
+}
+
+.title {
+margin-bottom: 20px;
+font-size: 24px;
+}
+
+.gallery-container {
+display: flex;
+flex-wrap: wrap;
+justify-content: center; /* Optional: center images horizontally */
+}
+
+.image-card {
+position: relative;
+margin: 0; /* No space between images */
+}
+
+.image-card img {
+display: block;
+width: 221px; /* Adjust size as needed */
+height: 350px; /* Maintain aspect ratio */
+}
+
+.image-label {
+position: absolute;
+top:50%; /* Position label near the bottom */
+left: 50%;
+transform: translate(-50%, -50%); /* Center the label */
+color: white; /* White text color */
+font-size: 14px;
+text-align: center;
+}
+
+
+/* PARTE DE LOS ESTILOS DEL CARRITO DE COMPRAS INICIO */
+
+#frame_carrito {
+    background: #fff;
+    display: none;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    width: 40%;
+    height: 100vh;
+    z-index: 999999999;
+    right: 0;
+    overflow-y: hidden; /* Oculta el desbordamiento del contenedor principal */
+}
+
+.contenedor_carrito {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    padding: 20px;
+    border: 1px solid #000;
+    height: calc(100vh - 50px); /* Ajusta la altura para excluir otros elementos */
+    overflow-y: auto; /* Habilita el scroll vertical */
+}
+
+.contenedor_carrito #comprar_todo{
+      border: none;
+      position: absolute;
+      bottom: 10px;
+      outline:none; 
+      background: #000;
+      color:#fff;
+      padding:10px;
+      border-radius: 5px;
+}
+.contenedor_carrito .info{
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: row;
+gap:5px;
+
+}
+
+.contenedor_carrito .info #cerrar_carrito{
+    padding:15px;
+    cursor:pointer;
+    width: 28px;
+    height: 25px;
+    border-radius: 50%;
+    background: rgb(214, 214, 214);
+    transition:300ms ease;
+    color:#000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor_carrito .info #cerrar_carrito:hover{
+   background: #000;
+   color:#fff;
+}
+
+.contenedor_carrito .caja{
+
+     width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: column;
+gap:5px;
+}
+
+.contenedor_carrito .caja .imagen_con_datos{
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: row;
+gap:5px;
+
+}
+
+.contenedor_carrito .caja .imagen_con_datos .nombre_talla{
+      display: flex;
+      width: 75%;
+      justify-content: start;
+      align-items: start;
+       flex-direction: column;
+       gap:4px;
+}
+
+.contenedor_carrito .caja .imagen_con_datos .nombre_talla #talla{
+
+ font-size: 12px;
+
+}
+
+
+.contenedor_carrito .caja .imagen_con_datos img{
+      width: 80px;
+      height: 60px;
+
+}
+
+.contenedor_carrito .caja .imagen_con_datos #eliminar_tenis{
+  cursor:pointer;
+  transition:150ms ease;
+  font-size:13px;
+
+}
+.contenedor_carrito .caja .imagen_con_datos #eliminar_tenis:active{
+      transform: scale(1.2) rotateX(360deg);
+      opacity:0.4;
+      
+
+}
+
+.contenedor_carrito .caja .contador_precio{
+      width: 100%;
+      display: flex;
+      justify-content: end;
+      align-items: center;
+      flex-direction: row;
+      gap:5px;
+}
+
+.contenedor_carrito .caja .contador_precio button{
+width: 35px;
+height: 25px;
+border: none;
+outline:none;
+background: #000;
+color:#fff;
+padding:5px;
+transition:100ms ease;
+border-radius: 4px;
+cursor:pointer;
+}
+
+.contenedor_carrito .caja .contador_precio button:active{
+   transform:scale(1.1);
+   opacity:0.6;
+}
+
+.contenedor_carrito .caja .contador_precio .conta{
+      width: 15%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-direction: row;
+      gap:4px;
+      color:#fff;
+      background: #000;
+}
+
+.contenedor_carrito .caja .contador_precio #precio_tenis{
+   font-weight: 700;
+   width: 68%;
+   display: flex;
+   justify-content: end;
+}
+
+/* Barra de busqueda */
+
+.search-box {
+  transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: rgb(235, 235, 235);
+}
+
+.search-box + label .search-icon {
+  color: black;
+}
+
+.search-box:hover {
+  color: white;
+  background: rgb(200, 200, 200);
+  box-shadow: 0 0 0 5px rgb(61, 71, 82);
+}
+
+.search-box:hover + label .search-icon {
+  color: white;
+}
+
+.search-box:focus {
+  transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding-left: 15px;
+  cursor: text;
+  width: 300px;
+  border-radius: auto;
+  background: rgb(235, 235, 235);
+  color: black;
+}
+
+.search-box:focus + label .search-icon {
+  color: black;
+}
+
+.search-box:not(:focus) {
+  text-indent: -5000px;
+}
+
+#search-submit {
+  position: relative;
+  left: -5000px;
+}
+
+.search-icon {
+  position: relative;
+  left: -30px;
+  color: white;
+  cursor: pointer;
+}
+
